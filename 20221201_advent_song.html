@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Favorite Music in 2022</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<link rel="stylesheet" href="style.css" />
+<div class="article">
+<header>
+<div style="text-align: right;">
+2022/12/21 Wed.
+<br />
+Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>
+</div>
+</header>
+<h1 id="my-favorite-music-in-2022---omit-in-toc">My Favorite Music in 2022<!-- omit in toc --></h1>
+<p>この記事は <a href="https://adventar.org/calendars/7422">Your Favorite Music in 2022 Advent Calendar 2022</a> の 12 月 21 日分になります。</p>
+<p>2022 年の私を彩った 5 曲を迷いに迷って、なんとか選びました。</p>
+<ul>
+<li><a href="#%E8%A7%92%E6%9D%BE%E6%95%8F%E7%94%9F---song-for-you">角松敏生 - Song for you</a></li>
+<li><a href="#nahee---city-drive">Nahee - City drive</a></li>
+<li><a href="#percy-faith---theme-from-summer-place">Percy Faith - Theme from Summer place</a></li>
+<li><a href="#diana-ross--tame-impala---turn-up-the-sunshine">Diana Ross &amp; Tame Impala - Turn up the sunshine</a></li>
+<li><a href="#m-flo-come-againvs-earth-wind--firebrazilian-rhyme-coverd-by-satoru-shionoya-mashup">m-flo 「come again」vs Earth, Wind &amp; Fire「Brazilian Rhyme (coverd by Satoru Shionoya )」【Mashup】</a></li>
+</ul>
+<p>それでは 1 曲ずつ見ていきましょう。</p>
+<h2 id="%E8%A7%92%E6%9D%BE%E6%95%8F%E7%94%9F---song-for-you">角松敏生 - Song for you</h2>
+<p><img src="media/DSC_0564.jpg" width="50%"><img src="media/DSC_0963.jpg" width="50%"></p>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/cKuI3kItgUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<p><a href="https://youtu.be/cKuI3kItgUc">角松敏生 - Toshiki Kadomatsu　SONG FOR YOU - YouTube</a></p>
+<!-- 今年一番聴いたアルバムのリード曲を選びました。
+アルバム "T's Ballad" はバラードだけを集めたベスト盤という位置づけですが、曲順といい、曲間のつなぎ方といい、ベスト盤とは思えないほど 1 枚でひとつの作品としてまとまりのあるアルバムとなっています。
+
+A 面に針を落とすと、まず吉田美奈子さんのアカペラによる Overture から始まり、そして Still I'm in love with you へと続いていきます。 -->
+<p>私が今年一番聴いたアルバムから 1 曲選びました。</p>
+<!-- このアルバムはバラードベスト盤という位置付けですが、オリジナルをリミックスや再録音していたり、曲間が波の音で繋がれていたりするなど、ベスト盤とは思えないほど 1 枚でひとつの作品になっている印象を強く受けます。 -->
+<!-- JL123 便の乗員乗客に捧げる鎮魂歌というテーマのこのアルバムは、ベスト盤とは思えないほどコンセプチュアルな構成です。 -->
+<p>このアルバムは曲間が波の音やインタールードで繋がれているので、ミックステープを聴いているような印象を受けます。
+また、バラードのみが収録されているため、1 日の中のどのタイミングで流してもぴったり合うような気がして、何回も繰り返し聴いていました。</p>
+<p>吉田美奈子さんのコーラス、ポンタさんのドラム、Richard Tee のピアノ、、、私の好きなミュージシャンが揃っていて、もう最高の一枚でした。</p>
+<h2 id="nahee---city-drive">Nahee - City drive</h2>
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/city-drive/1591361685?i=1591361687"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1lKA6Qy1QbzSeF0Ec7iolp?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>韓国の CITY POP です。</p>
+<p>いかにも 80 年代の日本の CITY POP に影響を受けた感じのメロディーやアレンジです。
+耳馴染みがあって聴きやすいのに、ハングルなので何を唄っているのか全く聞き取れません。
+それがエキゾチックな雰囲気をより引き立てていて、クセになってしまいました。</p>
+<h2 id="percy-faith---theme-from-summer-place">Percy Faith - Theme from Summer place</h2>
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/theme-from-a-summer-place/158424806?i=158426004"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6zwvB879PJSpTyFcg2wwnL?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>今年の前半はエレベーターミュージックにハマっていました。
+その中でも特に聴き込んだ 1 曲を選択。</p>
+<p>晴れた日の午前中の在宅勤務の BGM としてよく聴いていました。
+そういえば、アニメ &quot;日常&quot; の中でこの曲をモチーフにしたサントラが流れていたような気がします。</p>
+<!-- エレベータミュージックを聴くと少し前のジェットストリームを思い出します。 -->
+<h2 id="diana-ross--tame-impala---turn-up-the-sunshine">Diana Ross &amp; Tame Impala - Turn up the sunshine</h2>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E3%82%BF%E3%83%BC%E3%83%B3-%E3%82%A2%E3%83%83%E3%83%97-%E3%82%B6-%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3/1622722473?i=1622722474"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4qfsIA030Dnr1K6rs2JVYq?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>あの Diana Ross が昨年に続き今年も新曲を出しているということが、とても嬉しい。</p>
+<p>今年 (2022年) は全米ツアーをやっていたようですね。一度でいいから生で彼女のパフォーマンスを観たいなあ。</p>
+<!-- ## 竹内まりや - シングル・アゲイン
+
+<iframe width="100%" height="150" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fi%2F1640441958&theme=light" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe> -->
+<h2 id="m-flo-come-againvs-earth-wind--firebrazilian-rhyme-coverd-by-satoru-shionoya-mashup">m-flo 「come again」vs Earth, Wind &amp; Fire「Brazilian Rhyme (coverd by Satoru Shionoya )」【Mashup】</h2>
+<p><a href="https://youtu.be/j1_FpmSd7HQ">m-flo 「come again」vs Earth, Wind &amp; Fire「Brazilian Rhyme (coverd by Satoru Shionoya )」【Mashup】- YouTube</a></p>
+<p>5 曲目はマッシュアップを選びました。</p>
+<p>最初からこういう曲だったんじゃないかというくらい、しっくりハマっていました。
+いつまででも聴き続けていられる心地よさがあります。
+こういうマッシュアップを作れる DJ はカッコいいなあ。</p>
+</div>
+<footer>
+<div style="text-align: right;">
+Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>
+</div>
+</footer>
+</body>
+</html>
