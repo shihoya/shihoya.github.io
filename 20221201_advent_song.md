@@ -23,7 +23,7 @@ Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo
 
 それでは 1 曲ずつ見ていきましょう。
 
-## 角松敏生 - Song for you
+# 角松敏生 - Song for you
 
 <img src="media/DSC_0564.jpg" width="50%"><img src="media/DSC_0963.jpg" width="50%">
 
@@ -48,7 +48,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 
 
 
-## Nahee - City drive
+# Nahee - City drive
 
 <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/city-drive/1591361685?i=1591361687"></iframe>
 
@@ -60,7 +60,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 耳馴染みがあって聴きやすいのに、ハングルなので何を唄っているのか全く聞き取れません。
 それがエキゾチックな雰囲気をより引き立てていて、クセになってしまいました。
 
-## Percy Faith - Theme from Summer place
+# Percy Faith - Theme from Summer place
 
 <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/theme-from-a-summer-place/158424806?i=158426004"></iframe>
 
@@ -73,7 +73,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 そういえば、アニメ "日常" の中でこの曲をモチーフにしたサントラが流れていたような気がします。
 <!-- エレベータミュージックを聴くと少し前のジェットストリームを思い出します。 -->
 
-## Diana Ross & Tame Impala - Turn up the sunshine
+# Diana Ross & Tame Impala - Turn up the sunshine
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E3%82%BF%E3%83%BC%E3%83%B3-%E3%82%A2%E3%83%83%E3%83%97-%E3%82%B6-%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3/1622722473?i=1622722474"></iframe>
 
@@ -87,7 +87,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 
 <iframe width="100%" height="150" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fi%2F1640441958&theme=light" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe> -->
 
-## m-flo 「come again」vs Earth, Wind & Fire「Brazilian Rhyme (coverd by Satoru Shionoya )」【Mashup】
+# m-flo 「come again」vs Earth, Wind & Fire「Brazilian Rhyme (coverd by Satoru Shionoya )」【Mashup】
 
 
 
