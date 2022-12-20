@@ -3,7 +3,12 @@
     break-after: page;
 }
 
-.article {
+/* .article {
     max-width: 600px;
     margin: 0 auto;
+}
+
+*/
+.images {
+    max-width: 1000px;
 }
