@@ -24,8 +24,8 @@ function include_header(rootDir) {
 
 function include_footer(rootDir) {
 	var footerString = '<footer>' +
-		'<div style="text-align: right;">' +
-		'Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>' +
+		'<div id="footer" style="text-align: center;">' +
+		'&copy; <a href="' + rootDir + 'index.html">shihoya.tokyo</a> 2022-2023 ' +
 		'</div>' +
 		'</footer>';
 	document.write(footerString);

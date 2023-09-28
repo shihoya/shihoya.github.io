@@ -1,8 +1,13 @@
+h1 {
+	line-height: 1.3;
+}
+
 h2 {
 	padding: 0.5em; /*文字周りの余白*/
 	color: #494949; /*文字色*/
 	background: #fffaf4; /*背景色*/
 	border-left: solid 5px var(--tintcolor); /*左線（実線 太さ 色）*/
+	line-height: 1.3;
 }
 
 /* Dark mode overrides (confusingly inverse) */
@@ -16,6 +21,7 @@ h2 {
 h3 {
 	position: relative;
 	padding: 0.25em 0;
+	line-height: 1.3;
 }
 
 h3:after {
@@ -24,4 +30,11 @@ h3:after {
 	height: 4px;
 	background: -webkit-linear-gradient(to right, var(--tintcolor), transparent);
 	background: linear-gradient(to right, var(--tintcolor), transparent);
+}
+
+#footer {
+    margin-top: 30px;
+    border-top: 1px solid var(--tintcolor);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

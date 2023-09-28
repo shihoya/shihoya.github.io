@@ -6,7 +6,7 @@
     --moredark: #000;
     --tintcolor: #ffaf58;
     border-top: 5px solid var(--tintcolor);
-    line-height: 1.5em;
+    line-height: 1.5;
     /* This causes wrapping h1's to collapse too small */
     font-family: sans-serif;
     font-size: 16px;
