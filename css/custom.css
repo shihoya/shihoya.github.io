@@ -1,12 +1,16 @@
 h2 {
-	padding: 0.5em;
-	/*文字周りの余白*/
-	color: #494949;
-	/*文字色*/
-	background: #fffaf4;
-	/*背景色*/
-	border-left: solid 5px #ffaf58;
-	/*左線（実線 太さ 色）*/
+	padding: 0.5em; /*文字周りの余白*/
+	color: #494949; /*文字色*/
+	background: #fffaf4; /*背景色*/
+	border-left: solid 5px var(--tintcolor); /*左線（実線 太さ 色）*/
+}
+
+/* Dark mode overrides (confusingly inverse) */
+@media (prefers-color-scheme: dark) {
+	h2 {
+		color: #fffaf4;
+		background: #494949;
+	}
 }
 
 h3 {
@@ -18,6 +22,6 @@ h3:after {
 	content: "";
 	display: block;
 	height: 4px;
-	background: -webkit-linear-gradient(to right, rgb(255, 175, 88), transparent);
-	background: linear-gradient(to right, rgb(255, 175, 88), transparent);
+	background: -webkit-linear-gradient(to right, var(--tintcolor), transparent);
+	background: linear-gradient(to right, var(--tintcolor), transparent);
 }

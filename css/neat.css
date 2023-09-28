@@ -4,7 +4,8 @@
     --lesslight: #efefef;
     --dark: #404040;
     --moredark: #000;
-    border-top: 5px solid var(--dark);
+    --tintcolor: #ffaf58;
+    border-top: 5px solid var(--tintcolor);
     line-height: 1.5em;
     /* This causes wrapping h1's to collapse too small */
     font-family: sans-serif;
