@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
 	<title>My Favorite Music in 2022</title>
@@ -7,21 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/neat.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
-	<!-- <div class="article"> -->
 
-	<!-- <script type="text/javascript"> writeHeader("./"); </script> -->
-	<header>
-		<div style="text-align: right;">
-			2022/12/21 Wed.
-			<br />
-			Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>
-		</div>
-	</header>
+	<script>header_with_date(new Date('2022/12/21 00:00'), './');</script>
 
 	<h1>My Favorite Music in 2022</h1>
 
@@ -131,12 +123,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 		こういうマッシュアップを作れる DJ はカッコいいなあ。</p>
 	<!-- </div> -->
 
-	<!-- <script>include_footer();</script> -->
-	<footer>
-		<div style="text-align: right;">
-			Mastodon : <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>
-		</div>
-	</footer>
+	<script>include_footer("./");</script>
 
 </body>
 

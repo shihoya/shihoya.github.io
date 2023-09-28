@@ -1,0 +1,23 @@
+h2 {
+	padding: 0.5em;
+	/*文字周りの余白*/
+	color: #494949;
+	/*文字色*/
+	background: #fffaf4;
+	/*背景色*/
+	border-left: solid 5px #ffaf58;
+	/*左線（実線 太さ 色）*/
+}
+
+h3 {
+	position: relative;
+	padding: 0.25em 0;
+}
+
+h3:after {
+	content: "";
+	display: block;
+	height: 4px;
+	background: -webkit-linear-gradient(to right, rgb(255, 175, 88), transparent);
+	background: linear-gradient(to right, rgb(255, 175, 88), transparent);
+}
