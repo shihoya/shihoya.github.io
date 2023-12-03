@@ -3,10 +3,14 @@ h1 {
 }
 
 h2 {
-	padding: 0.5em; /*文字周りの余白*/
-	color: #494949; /*文字色*/
-	background: #fffaf4; /*背景色*/
-	border-left: solid 5px var(--tintcolor); /*左線（実線 太さ 色）*/
+	padding: 0.5em;
+	/*文字周りの余白*/
+	color: #494949;
+	/*文字色*/
+	background: #fffaf4;
+	/*背景色*/
+	border-left: solid 5px var(--tintcolor);
+	/*左線（実線 太さ 色）*/
 	line-height: 1.3;
 }
 
@@ -33,8 +37,165 @@ h3:after {
 }
 
 #footer {
-    margin-top: 30px;
-    border-top: 1px solid var(--tintcolor);
-    padding-top: 20px;
-    padding-bottom: 20px;
+	margin-top: 30px;
+	border-top: 1px solid var(--tintcolor);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+table {
+	text-align: left;
+	position: relative;
+	border-collapse: collapse;
+	/* white-space: nowrap; */
+	/* background-color: var(--lesslight); */
+}
+
+/* .table-wrap {
+	overflow-x: scroll;
+} */
+
+/* .table-wrap table {
+	width: 100%;
+} */
+
+.table-wrap {
+	overflow: auto;
+	/*tableをスクロールさせる*/
+	white-space: nowrap;
+	/*tableのセル内にある文字の折り返しを禁止*/
+}
+
+.table-wrap::-webkit-scrollbar {
+	/*tableにスクロールバーを追加*/
+	height: 5px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+	/*tableにスクロールバーを追加*/
+	background: #F1F1F1;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+	/*tableにスクロールバーを追加*/
+	background: #BCBCBC;
+}
+
+/* Spacing */
+td,
+th {
+	border: 1px solid #999;
+	padding: 2.5px 10px;
+}
+
+th {
+	background: var(--tintcolor);
+	color: white;
+	border-radius: 0;
+	position: sticky;
+	top: 0;
+	padding: 2.5px 10px;
+}
+
+.primary {
+	background-color: #000000
+}
+
+tfoot>tr {
+	background: black;
+	color: white;
+}
+
+/*目次関連*/
+
+.toc-001 {
+	margin-bottom: 30px;
+	padding: 1em 1em 1em 2em;
+	border: 1px solid var(--tintcolor);
+	background-color: var(--lesslight);
+}
+
+.toc-001 div {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 5px 0;
+}
+
+.toc-001 ol {
+	list-style-type: disc;
+	margin: 0;
+	padding: 0 1.2em;
+	overflow: hidden;
+}
+
+.toc-001 ol ol {
+	margin-top: 5px;
+}
+
+.toc-001 li {
+	padding: 5px 0;
+}
+
+.toc-001 a {
+	color: var(--tintcolor);
+}
+
+/* tbody>tr:hover {
+	background-color: var(--tintcolor);
+} */
+
+/* td, th {
+	border: 1px solid #999;
+	padding: 2.5px;
+  }
+  td{
+	background: gray;
+	color: white;
+  }
+  .primary{
+	background-color: brown;
+	position: sticky;
+  }
+   th {
+	background: var(--tintcolor);
+	color: white;
+	border-radius: 0;
+	top: 0;
+	padding: 2.5px;
+  }
+  tbody > tr:hover {
+	background-color: var(--tintcolor);
+  } */
+
+  blockquote {
+    position: relative;
+    padding: 30px 15px 8px 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: var(--lesslight);
+    color: #555;
+}
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    content: "“";
+    font-family: sans-serif;
+    color: #cfcfcf;
+    font-size: 90px;
+    line-height: 1;
+}
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
 }
