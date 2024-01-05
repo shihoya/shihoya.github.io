@@ -36,8 +36,9 @@ function header_with_date(datetime, rootDir) {
 	var month = datetime.getMonth() + 1;
 	var day = datetime.getDate();
 	var dayOfWeek = datetime.getDay();
-	var dayOfWeekStr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dayOfWeek];
-	var dateString = year + '/' + month + '/' + day + ' ' + dayOfWeekStr + '.';
+	// var dayOfWeekStr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dayOfWeek];
+	var dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土"][dayOfWeek];
+	var dateString = year + '/' + month + '/' + day + ' (' + dayOfWeekStr + ')';
 
 	var headerSource = '<header><a class="home" href="' + rootDir + 'index.html">&nwarr; HOME</a>' +
 		'<div style = "text-align: right;">' +
