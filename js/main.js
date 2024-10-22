@@ -25,7 +25,7 @@
 function include_footer(rootDir) {
 	var footerString = '<footer>' +
 		'<div id="footer" style="text-align: center;">' +
-		'&copy; <a href="' + rootDir + 'index.html">home.shihoya.tokyo</a> 2022-2024 ' +
+		'&copy; <a href="' + rootDir + 'index.html">home.shihoya.tokyo</a> 2022-2025 ' +
 		'</div>' +
 		'</footer>';
 	document.write(footerString);
