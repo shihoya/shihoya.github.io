@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<title>そうだ、クライアントアプリ自作しよう</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/neat.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+
+	<meta name="robots" content="noindex" />
+
+	<!-- <meta property="og:url" content="https://home.shihoya.tokyo/artilces/20241201_advent_music.html"> -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="そうだ、クライアントアプリ自作しよう">
+	<meta property="og:description" content="自作マストドンクライアントアプリの開発に至る経緯から自作のメリットデメリットなどをまとめます。">
+	<meta property="og:site_name" content="home.shihoya.tokyo">
+	<!-- <meta property="og:image" content=""> -->
+	<meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">
+</head>
+
+<body>
+
+	<script>header_with_date(new Date('2024/12/6 00:00'), '../');</script>
+
+	<!-- <h1>自作 Mastodon クライアントを App Store でリリースした話</h1>
+	<h1>自作マストドンクライアントのリリース顛末記</h1> -->
+	<h1>そうだ、クライアントアプリ自作しよう</h1>
+
+	<p>この記事は <a href="https://adventar.org/calendars/10051">Fediverse Advent Calendar 2024</a> の 12 月 6 日分になります。</p>
+
+	<!-- <p>2018 年頃から使い続けていた自作のマストドンクライアントを今年の 2 月に App Store でリリースしました。自分好みに設計したクライアントアプリは、やっぱり使いやすい！！ ということで、本稿ではクライアントアプリ自作の魅力を綴っていきます。</p> -->
+
+	<p>2018 年頃から使い続けていた自作のマストドンクライアントを今年の 2 月に App Store でリリースしました。開発に至る経緯から自作のメリットデメリットなどをまとめます。</p>
+
+	<p>私が作ったクライアントアプリの App Store のリンクを貼っておきます。興味があれば見に来てね → <a href="https://apps.apple.com/jp/app/krazytown/id6453363675">KrazyTown on App Store</a></p>
+
+	<div class="toc-001">
+		<div>
+			目次
+		</div>
+		<ol>
+			<li><a href="#introduction">簡単な自己紹介</a></li>
+			<li><a href="#2">クライアントの自作に至った経緯</a></li>
+			<li><a href="#3">自作クライアントの設計思想</a></li>
+			<li><a href="#4">自作するメリット</a></li>
+			<li><a href="#5">自作することによるデメリット</a></li>
+			<li><a href="#ending">最後に</a></li>
+		</ol>
+	</div>
+
+	<h2 id="introduction">簡単な自己紹介</h2>
+
+	<p>まずは軽く自己紹介します。</p>
+
+	<p>普段はおひとり様インスタンスでマストドンライフを満喫しております。</p>
+
+	<p>マストドンを始めたのは 2017 年 12 月に <a href="https://mstdn.kemono-friends.info/@artindedekind">ますとどんちほー</a>
+		にアカウントを作ったのが最初でした。それ以降、メインアカウントを <a href="https://mstdn.kemono-friends.info/@artindedekind">ますとどんちほー</a> → <a
+			href="https://mstdn.jp/@artindedekind">mstdn.jp</a> → 玉子丼 (閉鎖済み) → <a
+			href="https://fedibird.com/@ARTi">Fedibird</a> → 再び玉子丼 と点々とした後、2022 年 11 月に <a
+			href="https://mstdn.shihoya.tokyo/@ARTi">おひとり様インスタンス</a> を建てて今に至ります。</p>
+
+	<figure>
+		<iframe src="https://mstdn.kemono-friends.info/@artindedekind/99099840683453731/embed" class="mastodon-embed"
+			style="max-width: 100%; border: 0" width="400" height="250" allowfullscreen="allowfullscreen"></iframe>
+		<script src="https://mstdn.kemono-friends.info/embed.js" async="async"></script>
+		<figcaption>たぶんこれが Fediverse での私の初めての投稿です。</figcaption>
+	</figure>
+
+	<h2 id="2">クライアントの自作に至った経緯</h2>
+
+	<p>私がマストドンを始めた 2017 年当時はマストドンクライアントと言えば、私が知る範囲では次のようなものしかありませんでした。
+	</p>
+
+	<ul>
+		<li>Tootodon</li>
+		<li>Tootle</li>
+		<li>friends.nico クライアントアプリ</li>
+		<li>Pawoo クライアントアプリ</li>
+	</ul>
+
+	<p>ニコフレや Pawoo のクライアントは他のインスタンスでも使えるようになっていましたが、当然の流れとして Tootodon と Tootle を使っていました。</p>
+
+	<p>流速の速い LTL チャット主体の ますとどんちほー を iPad から見ていた私には次のような不満点がありました。</p>
+
+	<ul>
+		<li>Tootle は iPad の画面の端から端まで表示されるので、タイムラインの横幅が広くなりすぎて見づらい</li>
+		<li>Tootodon はタイムラインを見ながら投稿を入力できない画面構成のため、速い LTL チャットについていけない</li>
+	</ul>
+
+	<p>マストドンは初期から API のドキュメントが整っていたので、それならば自作してしまおうと思い至りました。(この時 iOS アプリはおろか、WebAPI を呼び出すようなプログラムすら実装したことが無かったのに、よくやったよ)</p>
+
+	<!-- <p>当時の私は iPad でマストドンをすることが多かったです。Tootodon はタイムラインの横幅が広がりすぎないようになっており iPad でも見やすかったのに対し、Tootle ではそのような実装はされておらず画面の端から端までタイムラインが広がってしまい見づらく感じていました。</p>
+
+	<p>一方で当時メインで使っていた ますとどんちほー は流速の速い LTL チャットが主流であったので、タイムラインを見ながら投稿を入力できる Tootle はこの点に於いて使いやすく、この部分に関しては Tootodon は扱いづらく感じていました。</p> -->
+
+	<h2 id="3">自作クライアントの設計思想</h2>
+
+	<p>クライアントを自作するにあたり「これだけは絶対にやろう」という仕様をいくつか決めました。</p>
+
+	<h3>iPad で動かしたときに横幅が広がりすぎないようにする</h3>
+
+	<p>今では swift の <a href="https://developer.apple.com/documentation/uikit/uiview/readablecontentguide"><code>readableContentGuide</code></a> を使えば容易に実装できますが、当時はこの API が無かったので AutoLayout で頑張って実装した記憶があります。現在は <code>readableContentGuide</code> を使用するコードに書き換えています。</p>
+
+	<h3>タイムラインを見ながら投稿を入力できるようにする</h3>
+
+	<p>実装してみると結構面倒でした。世の中のマストドンクライアントアプリの大多数がタイムラインと入力画面を別画面にしている理由が分かった気がします。</p>
+
+	<h3>極力通信量を抑えたい</h3>
+
+	<p>2017 年当時の自宅回線は ADSL の 2Mbps だったため、通信量を抑えるのは必須でした。この回線速度のために、マストドンをブラウザで見ると読み込み時間が大変長かったように記憶しています。</p>
+
+	<h3>ゼロ幅スペースでつなげた絵文字を隙間なく表示する</h3>
+
+	<p>ブラウザだと隙間なく見れるのに、同じように表示できるクライアントアプリが無かったことは不満でした。</p>
+
+	<p>最近は misskey で横長のカスタム絵文字が表示できるため、ゼロ幅スペースで絵文字をつなげて表示する人は少ないかもしれませんが、マストドンでは必須機能だと思っています。</p>
+
+	<h2 id="4">自作するメリット</h2>
+
+	<p>2018 年頃にクライアントアプリを作り、それ以降改良を続けながら使い続ける中で感じたメリットを上げます。</p>
+
+	<h3>究極のフルカスタマイズ</h3>
+
+	<p>これは言うまでもありません。</p>
+
+	<p>タイムラインや画像を読み込むタイミング、文章とボタンの隙間、CW の投稿を開くときのアニメーションの有無など、全てを自分で決められます。iOS 自体が対応していない動作もあるので、完全に自分の好みに出来るわけではありませんが、カスタマイズの限界まで攻めることができます。</p>
+
+	<h3>(自分がやめない限り) アプリの開発終了は無い</h3>
+
+	<p>他人が作ったアプリだと開発が終了することがあります。終了してしまうと App Store のシステムでは新しくインストールできないばかりか、バックアップから復元することもできません。(Tootodon をもう一回使いたいな～)</p>
+
+	<p>その点、自作ならば自分が続けたいと思う限り終了することはありません。</p>
+
+	<h3>古い端末や OS に対応できる</h3>
+
+	<p>古いバージョンの OS のサポートを切ってしまうアプリもありますが、自作ならば対応バージョンは完全に自分でコントロールできます。</p>
+
+	<h2 id="5">自作することによるデメリット</h2>
+
+	<p>もちろんデメリットもあります</p>
+
+	<h3>スマホの OS 乗り換えがしづらい</h3>
+
+	<p>最近の iPhone は高価格な機種ばかりなので、比較的安価な Pixel に乗り換えたいと思った時期があるのですが、自作クライアントは完全に iOS 用に作ってしまったので、またゼロから Android 用を作るのは気が引けます。そんなこともあり、OS の乗り換えのハードルはかなり高くなってしまいます。</p>
+
+	<h3>mstdn.jp ではストリーム受信できない</h3>
+
+	<p>これは自作クライアントのデメリットではないかもしれません。</p>
+
+	<p>mstdn.jp は きぼうソフトが管理していた頃に Tootodon、Tootle などの当時よく使われていたクライアント以外はストリーム API を使えないようにしてしまいました。それが現在でも続いるようです。もう jp に戻る気は無いので問題ないですけど。</p>
+
+	<h2 id="ending">最後に</h2>
+
+	<p>マストドン API はドキュメントが揃っています。また、マストドン自体は後方互換性を極力維持するように開発が進められているように感じます。そのため、クライアントアプリの開発の敷居はとても低いです。</p>
+
+	<p>なので、この記事を読まれている皆さんも気軽にマストドンクライアントを自作されてみてはいかがでしょうか？ その先には、より楽しいマストドンライフが待っているに違いありません。</p>
+
+	<script>include_footer("../");</script>
+
+</body>
+
+</html>
