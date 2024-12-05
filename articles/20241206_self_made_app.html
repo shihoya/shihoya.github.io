@@ -35,7 +35,7 @@
 
 	<!-- <p>2018 年頃から使い続けていた自作のマストドンクライアントを今年の 2 月に App Store でリリースしました。自分好みに設計したクライアントアプリは、やっぱり使いやすい！！ ということで、本稿ではクライアントアプリ自作の魅力を綴っていきます。</p> -->
 
-	<p>2018 年頃から使い続けていた自作のマストドンクライアントを今年の 2 月に App Store でリリースしました。開発に至る経緯から自作のメリットデメリットなどをまとめます。</p>
+	<p>2018 年頃から使い続けていた自作のマストドンクライアントを今年の 2 月に App Store でリリースしました。開発に至る経緯や自作のメリットデメリットなどをまとめます。</p>
 
 	<p>私が作ったクライアントアプリの App Store のリンクを貼っておきます。興味があれば見に来てね → <a href="https://apps.apple.com/jp/app/krazytown/id6453363675">KrazyTown on App Store</a></p>
 
@@ -105,13 +105,13 @@
 
 	<h3>iPad で動かしたときに横幅が広がりすぎないようにする</h3>
 
-	<p>今では swift の <a href="https://developer.apple.com/documentation/uikit/uiview/readablecontentguide"><code>readableContentGuide</code></a> を使えば容易に実装できますが、当時はこの API が無かったので AutoLayout で頑張って実装した記憶があります。現在は <code>readableContentGuide</code> を使用するコードに書き換えています。</p>
+	<p>今では <code>UIKit</code> の <a href="https://developer.apple.com/documentation/uikit/uiview/readablecontentguide"><code>readableContentGuide</code></a> を使えば容易に実装できますが、当時はこの API が無かったので AutoLayout で頑張って実装した記憶があります。現在は <code>readableContentGuide</code> を使用するコードに書き換えています。</p>
 
 	<h3>タイムラインを見ながら投稿を入力できるようにする</h3>
 
 	<p>実装してみると結構面倒でした。世の中のマストドンクライアントアプリの大多数がタイムラインと入力画面を別画面にしている理由が分かった気がします。</p>
 
-	<h3>極力通信量を抑えたい</h3>
+	<h3>通信量を極力抑えたい</h3>
 
 	<p>2017 年当時の自宅回線は ADSL の 2Mbps だったため、通信量を抑えるのは必須でした。この回線速度のために、マストドンをブラウザで見ると読み込み時間が大変長かったように記憶しています。</p>
 
