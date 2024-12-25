@@ -19,16 +19,18 @@
 	<meta property="og:title" content="Hello World">
 	<meta property="og:description" content="fediverse:creator タグのテストです。">
 	<meta property="og:site_name" content="home.shihoya.tokyo">
-    <meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">
+	<meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">
 </head>
 
 <body>
+	<div id="include_header"></div>
+	<div id="content_src">
 
-	<script>header_with_date(new Date('2024/12/6 00:00'), '../');</script>
+		<script>header_with_date(new Date('2024/12/6 00:00'), '../');</script>
 
-	<h1>Hello World</h1>
+		<h1>Hello World</h1>
 
-	<!-- <p>この記事は <a href="https://adventar.org/calendars/10051">Fediverse Advent Calendar 2024</a> の 12 月 6 日分になります。</p>
+		<!-- <p>この記事は <a href="https://adventar.org/calendars/10051">Fediverse Advent Calendar 2024</a> の 12 月 6 日分になります。</p>
 
 	<div class="toc-001">
 		<div>
@@ -41,7 +43,9 @@
 
 	<h2 id="ending">最後に</h2> -->
 
-	<script>include_footer("../");</script>
+	</div>
+	<div id="include_footer"></div>
+	<script src="../js/include_headers.js"></script>
 
 </body>
 

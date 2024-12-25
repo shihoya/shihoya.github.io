@@ -40,13 +40,11 @@ function header_with_date(datetime, rootDir) {
 	var dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土"][dayOfWeek];
 	var dateString = year + '/' + month + '/' + day + ' (' + dayOfWeekStr + ')';
 
-	var headerSource = '<header><a class="home" href="' + rootDir + 'index.html">&nwarr; HOME</a>' +
-		'<div style = "text-align: right;">' +
+	var headerSource = '<div style = "text-align: right;">' +
 		'<time datetime=' + datetime + '>' + dateString + '</time>' +
 		'<br />' +
 		'Mastodon: <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>' +
-		'</div>' +
-		'</header>';
+		'</div>';
 	document.write(headerSource);
 }
 

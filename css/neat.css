@@ -5,7 +5,7 @@
     --dark: #404040;
     --moredark: #000;
     --tintcolor: #59ADC4;
-    border-top: 5px solid var(--tintcolor);
+    /* border-top: 5px solid var(--tintcolor); */
     line-height: 1.5;
     /* This causes wrapping h1's to collapse too small */
     font-family: sans-serif;
@@ -44,8 +44,13 @@ code {
 body {
     background-color: var(--light);
     margin: 0;
+}
+
+#content_src {
     max-width: 800px;
-    padding: 0 20px 20px 20px;
+    /* padding: 0 20px 20px 20px; */
+    padding: 20px;
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
 }

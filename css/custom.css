@@ -36,7 +36,23 @@ h3:after {
 	background: linear-gradient(to right, var(--tintcolor), transparent);
 }
 
-#footer {
+#header_src {
+	/* width: ; */
+	/* height: 120px;  */
+	text-align: center;
+	/* padding: 0px 0; */
+	/* background-color: var(--tintcolor); */
+	border-top: 5pt solid var(--tintcolor);
+	border-bottom: 5pt solid var(--tintcolor);
+	/* border-bottom-width: 5pt;
+	border-bottom-style: initial; */
+}
+
+#no_underline {
+	text-decoration: none;
+}
+
+#footer_src {
 	margin-top: 30px;
 	border-top: 1px solid var(--tintcolor);
 	padding-top: 20px;
