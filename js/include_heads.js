@@ -15,4 +15,4 @@ var content = '<meta http-equiv="Content-type" content="text/html;charset=UTF-8"
 '<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#6AC4DC">' +
 '<meta name="robots" content="noindex" />' +
 '<meta property="og:type" content="website" />';
-document.querySelector("#include_head").insertAdjacentHTML('afterbegin', content)
+document.querySelector("#include_head").insertAdjacentHTML('afterbegin', content);
