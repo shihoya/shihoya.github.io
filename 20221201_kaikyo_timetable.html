@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head id="include_head">
 <title>20221201_kaikyo_timetable.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
 
 <style>
 /* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
@@ -355,11 +355,12 @@ code {
 </style>
 
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    <meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">
+    
+    <script src="/js/include_heads.js"></script>
 </head>
 <body>
     <div id="include_header"></div>
-    <div id="content_src">
+    <div class="readable_width content_src">
   <script>
     mermaid.initialize({
       startOnLoad: true,

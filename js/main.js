@@ -38,12 +38,10 @@ function header_with_date(datetime, rootDir) {
 	var dayOfWeek = datetime.getDay();
 	// var dayOfWeekStr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dayOfWeek];
 	var dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土"][dayOfWeek];
-	var dateString = year + '/' + month + '/' + day + ' (' + dayOfWeekStr + ')';
+	var dateString = year + '年' + month + '月' + day + '日 (' + dayOfWeekStr + ')';
 
 	var headerSource = '<div style = "text-align: right;">' +
 		'<time datetime=' + datetime + '>' + dateString + '</time>' +
-		'<br />' +
-		'Mastodon: <a href="https://mstdn.shihoya.tokyo/@ARTi">@ARTi@mstdn.shihoya.tokyo</a>' +
 		'</div>';
 	document.write(headerSource);
 }
