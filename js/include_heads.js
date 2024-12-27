@@ -10,9 +10,10 @@ var content = '<meta http-equiv="Content-type" content="text/html;charset=UTF-8"
 '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>' +
 '<script type="text/javascript" src="/js/main.js"></script>' +
 '<meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo" />' +
-'<meta property="og:site_name" content="home.shihoya.tokyo" />' +
+'<meta property="og:site_name" content="Shihoya\'s home" />' +
 '<meta name="theme-color" media="(prefers-color-scheme: light)" content="#59ADC4">' +
 '<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#6AC4DC">' +
 '<meta name="robots" content="noindex" />' +
 '<meta property="og:type" content="website" />';
-document.querySelector("#include_head").insertAdjacentHTML('afterbegin', content);
+// document.querySelector("#include_head").insertAdjacentHTML('afterbegin', content);
+document.write(content);
