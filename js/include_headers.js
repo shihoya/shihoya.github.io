@@ -13,8 +13,7 @@ var header_data = '<header>' +
 'Shihoya\'s home' +
 '</a>' +
 '<a id="header_icon" href="https://mstdn.shihoya.tokyo/@ARTi">' +
-'aaa' +
-// '<i class="fa-brands fa-mastodon" style="color: white;"></i>' +
+'<i class="fa-brands fa-mastodon" style="color: white;"></i>' +
 '</a>' +
 '</div>' +
 '</div>' +
