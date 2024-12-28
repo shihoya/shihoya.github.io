@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <div id="include_header"></div>
+    <script>insert_header();</script>
     <div class="readable_width content_src">
 
-        <script>header_with_date(new Date('2023/12/22 00:00'), '../');</script>
+        <script>insert_timestamp(new Date('2023/12/22 00:00'));</script>
 
         <h1>“<ruby>喫茶<rt>カフェ</rt></ruby>ステラと死神の蝶” の感想</h1>
 
@@ -192,9 +192,8 @@
         <p>プレイ前は懐疑的なイメージを持っていたのに、すっかりハマってしまいました。食わず嫌いは損だと実感しました。次はどのノベルゲームをやろうかな？</p>
 
     </div>
-    <div id="include_footer"></div>
-    <script src="/js/include_headers.js"></script>
-
+    <script>insert_footer();</script>
+    
 </body>
 
 </html>

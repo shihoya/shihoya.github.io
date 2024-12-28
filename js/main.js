@@ -22,16 +22,16 @@
 // 	});
 // }
 
-function include_footer(rootDir) {
-	var footerString = '<footer>' +
-		'<div id="footer" style="text-align: center;">' +
-		'&copy; <a href="' + rootDir + 'index.html">home.shihoya.tokyo</a> 2022-2025 ' +
-		'</div>' +
-		'</footer>';
-	document.write(footerString);
-}
+// function include_footer(rootDir) {
+// 	var footerString = '<footer>' +
+// 		'<div id="footer" style="text-align: center;">' +
+// 		'&copy; <a href="' + rootDir + 'index.html">home.shihoya.tokyo</a> 2022-2025 ' +
+// 		'</div>' +
+// 		'</footer>';
+// 	document.write(footerString);
+// }
 
-function header_with_date(datetime, rootDir) {
+function insert_timestamp(datetime) {
 	var year = datetime.getFullYear();
 	var month = datetime.getMonth() + 1;
 	var day = datetime.getDate();
@@ -46,6 +46,29 @@ function header_with_date(datetime, rootDir) {
 	document.write(headerSource);
 }
 
-// function helloWorld() {
-// 	document.write("AAAAAA");
-// }
+function insert_header() {
+	var header_data = '<header>' +
+	'<div id="header_src">' +
+	'<div class="readable_width">' +
+	'<div class="header_content">' +
+	'<a id="header_text" class="no_underline" href="/">' +
+	'Shihoya\'s home' +
+	'</a>' +
+	'<a id="header_icon" href="https://mstdn.shihoya.tokyo/@ARTi">' +
+	'<i class="fa-brands fa-mastodon" style="color: white;"></i>' +
+	'</a>' +
+	'</div>' +
+	'</div>' +
+	'</div>' +
+	'</header>';
+	document.write(header_data);
+}
+
+function insert_footer() {
+	var footer_data = '<footer>' + 
+	'<div id="footer_src" style="text-align: center;">' + 
+	'&copy; <a href="/">home.shihoya.tokyo</a> 2022-2025' + 
+	'</div>' + 
+	'</footer>';
+	document.write(footer_data);
+}

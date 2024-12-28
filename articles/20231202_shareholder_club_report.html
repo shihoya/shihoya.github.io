@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div id="include_header"></div>
+    <script>insert_header();</script>
     <div class="readable_width content_src">
 
-        <script>header_with_date(new Date('2023/12/02 00:00'), '../');</script>
+        <script>insert_timestamp(new Date('2023/12/02 00:00'));</script>
 
         <h1>2023年まちトドン株主部活動報告</h1>
 
@@ -229,9 +229,8 @@
         <p>まちトドン的には東京地下鉄株の上場が注目の的でしょうか。一人の利用者としては都営地下鉄と統合されないのは残念ですが、地下鉄株上場には期待したいです。</p>
 
     </div>
-    <div id="include_footer"></div>
-    <script src="/js/include_headers.js"></script>
-
+    <script>insert_footer();</script>
+    
 </body>
 
 </html>

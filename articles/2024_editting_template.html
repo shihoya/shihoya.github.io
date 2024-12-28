@@ -12,10 +12,10 @@
 </head>
 
 <body>
-	<div id="include_header"></div>
+	<script>insert_header();</script>
 	<div class="readable_width content_src">
 
-		<script>header_with_date(new Date('2024/12/6 00:00'), '../');</script>
+		<script>insert_timestamp(new Date('2024/12/6 00:00'));</script>
 
 		<h1>PAGE_TITLE</h1>
 
@@ -33,9 +33,8 @@
 		<h2 id="ending">最後に</h2>
 
 	</div>
-	<div id="include_footer"></div>
-	<script src="/js/include_headers.js"></script>
-
+	<script>insert_footer();</script>
+	
 </body>
 
 </html>

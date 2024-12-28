@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div id="include_header"></div>
+    <script>insert_header();</script>
     <div class="readable_width content_src">
 
-        <script>header_with_date(new Date('2024/12/1 00:00'), '../');</script>
+        <script>insert_timestamp(new Date('2024/12/1 00:00'));</script>
 
         <h1>My Favorite Music in 2024</h1>
 
@@ -150,9 +150,8 @@
             年代でした。そんなこともあり、私にとって今年は CD の魅力再発見の 1 年だったように思いました。</p>
 
     </div>
-    <div id="include_footer"></div>
-    <script src="/js/include_headers.js"></script>
-
+    <script>insert_footer();</script>
+    
 </body>
 
 </html>

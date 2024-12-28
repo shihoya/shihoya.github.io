@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div id="include_header"></div>
+    <script>insert_header();</script>
     <div class="readable_width content_src">
 
-        <script>header_with_date(new Date('2023/12/10 00:00'), '../');</script>
+        <script>insert_timestamp(new Date('2023/12/10 00:00'));</script>
 
         <h1>上野から函館へ贅沢な旅路の記録</h1>
 
@@ -284,9 +284,8 @@
         <p>出来るのならばもう一度乗りたいけど、無理かなあ......</p>
 
     </div>
-    <div id="include_footer"></div>
-    <script src="/js/include_headers.js"></script>
-
+    <script>insert_footer();</script>
+    
 </body>
 
 </html>

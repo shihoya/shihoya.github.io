@@ -9,10 +9,10 @@
 </head>
 
 <body>
-	<div id="include_header"></div>
+	<script>insert_header();</script>
 	<div class="readable_width content_src">
 
-		<script>header_with_date(new Date('2023/12/01 00:00'), '../');</script>
+		<script>insert_timestamp(new Date('2023/12/01 00:00'));</script>
 
 		<h1>My Favorite Music in 2023</h1>
 
@@ -126,9 +126,8 @@
 			でアルバム全体を聴いてみてハマっていく、というのがいつものパターンでした。それにしても、今年はグッとくる新譜に出会えなかった気がします。</p>
 
 	</div>
-	<div id="include_footer"></div>
-	<script src="/js/include_headers.js"></script>
-
+	<script>insert_footer();</script>
+	
 </body>
 
 </html>

@@ -7,10 +7,10 @@
 </head>
 
 <body>
-	<div id="include_header"></div>
+	<script>insert_header();</script>
 	<div class="readable_width content_src">
 
-		<script>header_with_date(new Date('2022/12/21 00:00'), '../');</script>
+		<script>insert_timestamp(new Date('2022/12/21 00:00'));</script>
 
 		<h1>My Favorite Music in 2022</h1>
 
@@ -125,9 +125,8 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 		<!-- </div> -->
 
 	</div>
-	<div id="include_footer"></div>
-	<script src="/js/include_headers.js"></script>
-
+	<script>insert_footer();</script>
+	
 </body>
 
 </html>

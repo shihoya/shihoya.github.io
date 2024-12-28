@@ -11,10 +11,10 @@
 </head>
 
 <body>
-	<div id="include_header"></div>
+	<script>insert_header();</script>
 	<div class="readable_width content_src">
 
-		<script>header_with_date(new Date('2024/12/6 00:00'), '../');</script>
+		<script>insert_timestamp(new Date('2024/12/6 00:00'));</script>
 
 		<!-- <h1>自作 Mastodon クライアントを App Store でリリースした話</h1>
 	<h1>自作マストドンクライアントのリリース顛末記</h1> -->
@@ -162,9 +162,8 @@
 		<p>なので、この記事を読まれている皆さんも気軽にマストドンクライアントを自作されてみてはいかがでしょうか？ その先には、より楽しいマストドンライフが待っているに違いありません。</p>
 
 	</div>
-	<div id="include_footer"></div>
-	<script src="/js/include_headers.js"></script>
-
+	<script>insert_footer();</script>
+	
 </body>
 
 </html>
