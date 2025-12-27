@@ -67,7 +67,7 @@ function insert_header() {
 function insert_footer() {
 	var footer_data = '<footer>' + 
 	'<div id="footer_src" style="text-align: center;">' + 
-	'&copy; <a href="/">Shihoya</a> 2022-2025' + 
+	'&copy; <a href="/">Shihoya</a> 2022-2026' + 
 	'</div>' + 
 	'</footer>';
 	document.write(footer_data);
