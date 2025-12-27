@@ -9,7 +9,7 @@ var content = '<meta http-equiv="Content-type" content="text/html;charset=UTF-8"
 '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />' +
 '<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>' +
 '<script type="text/javascript" src="/js/main.js"></script>' +
-'<meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">' +
+// '<meta name="fediverse:creator" content="@ARTi@mstdn.shihoya.tokyo">' +
 '<meta property="og:site_name" content="Shihoya\'s home" />' +
 '<meta name="theme-color" media="(prefers-color-scheme: light)" content="#59ADC4">' +
 '<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#6AC4DC">' +
