@@ -2,16 +2,16 @@
 <html lang="ja">
 
 <head id="include_head">
-	<script src="/js/include_heads.js"></script>
 	<title>そうだ、クライアントアプリ自作しよう</title>
 	<!-- <meta property="og:url" content="https://home.shihoya.tokyo/artilces/20241201_advent_music.html"> -->
 
 	<meta property="og:title" content="そうだ、クライアントアプリ自作しよう">
 	<meta property="og:description" content="自作マストドンクライアントアプリの開発に至る経緯から自作のメリットデメリットなどをまとめます。">
+    {% include head.html %}
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2024/12/6 00:00'));</script>
@@ -162,7 +162,7 @@
 		<p>なので、この記事を読まれている皆さんも気軽にマストドンクライアントを自作されてみてはいかがでしょうか？ その先には、より楽しいマストドンライフが待っているに違いありません。</p>
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

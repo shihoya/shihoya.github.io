@@ -2,7 +2,6 @@
 <html>
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
 	<title>table test</title>
 	
 	
@@ -43,11 +42,12 @@
 	</style>
     
     
-
+	
+    {% include head.html %}
 </head>
 
 <body>
-    <script>insert_header();</script>
+    {% include header.html %}
     <div class="readable_width content_src">
 	<div class="st-tbl1">
 		<table>

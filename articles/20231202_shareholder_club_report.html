@@ -2,16 +2,16 @@
 <html lang="ja">
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
     <title>2023年まちトドン株主部活動報告</title>
     <meta property="og:title" content="2023年まちトドン株主部活動報告">
     <meta property="og:description" content="まちトドン株主部の活動報告です。">
 
     <meta property="og:image" content="https://home.shihoya.tokyo/articles/media/202311231334_image.jpg">
+    {% include head.html %}
 </head>
 
 <body>
-    <script>insert_header();</script>
+    {% include header.html %}
     <div class="readable_width content_src">
 
         <script>insert_timestamp(new Date('2023/12/02 00:00'));</script>
@@ -229,7 +229,7 @@
         <p>まちトドン的には東京地下鉄株の上場が注目の的でしょうか。一人の利用者としては都営地下鉄と統合されないのは残念ですが、地下鉄株上場には期待したいです。</p>
 
     </div>
-    <script>insert_footer();</script>
+    {% include footer.html %}
     
 </body>
 

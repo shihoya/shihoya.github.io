@@ -2,12 +2,12 @@
 <html lang="ja">
 
 <head id="include_head">
-	<script src="/js/include_heads.js"></script>
 	<title>My Favorite Music in 2022</title>
+    {% include head.html %}
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2022/12/21 00:00'));</script>
@@ -125,7 +125,7 @@ A 面に針を落とすと、まず吉田美奈子さんのアカペラによる
 		<!-- </div> -->
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

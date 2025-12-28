@@ -2,17 +2,17 @@
 <html lang="ja">
 
 <head id="include_head">
-	<script src="/js/include_heads.js"></script>
 	<title>PAGE_TITLE</title>
 
 	<meta property="og:title" content="PAGE_TITLE">
 	<meta property="og:description" content="">
 
 	<!-- <meta property="og:image" content=""> -->
+    {% include head.html %}
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2024/12/6 00:00'));</script>
@@ -33,7 +33,7 @@
 		<h2 id="ending">最後に</h2>
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

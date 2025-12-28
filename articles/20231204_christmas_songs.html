@@ -2,15 +2,15 @@
 <html lang="ja">
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
     <title>私的クリスマスソング 5 選</title>
     <meta property="og:title" content="私的クリスマスソング 5 選">
     <meta property="og:description" content="私が好きなクリスマスソングを紹介するだけです。">
-    <meta property="og:image" content="">
+    <!-- <meta property="og:image" content=""> -->
+    {% include head.html %}
 </head>
 
 <body>
-    <script>insert_header();</script>
+    {% include header.html %}
     <div class="readable_width content_src">
 
         <script>insert_timestamp(new Date('2023/12/04 00:00'));</script>
@@ -113,7 +113,7 @@
         <p>まちトドンには全く関連がありませんが、私の好きなクリスマスソングを紹介しました。まちトドンアドカレには、まだ空き枠があります。ぜひ、あなたの好きなクリスマスソングも教えてください。</p>
 
     </div>
-    <script>insert_footer();</script>
+    {% include footer.html %}
     
 </body>
 

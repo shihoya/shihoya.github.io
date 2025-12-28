@@ -2,14 +2,14 @@
 <html lang="ja">
 
 <head id="include_head">
-	<script src="/js/include_heads.js"></script>
 	<title>My Favorite Music in 2023</title>
 	<meta property="og:title" content="My Favorite Music in 2023">
 	<meta property="og:description" content="今年ハマった5曲を紹介します。">
+    {% include head.html %}
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2023/12/01 00:00'));</script>
@@ -126,7 +126,7 @@
 			でアルバム全体を聴いてみてハマっていく、というのがいつものパターンでした。それにしても、今年はグッとくる新譜に出会えなかった気がします。</p>
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

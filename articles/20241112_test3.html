@@ -2,30 +2,16 @@
 <html lang="ja">
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
 	<title>PAGE_TITLE</title>
-	{% include fediverse.html %}
-	
-	
-	
-
-	
-	
-
-	
-
 	<!-- <meta property="og:url" content="https://home.shihoya.tokyo/artilces/20241201_advent_music.html"> -->
 	
 	<meta property="og:title" content="Hello World">
 	<meta property="og:description" content="fediverse:creator タグのテストです。">
-	
-	
-    
-
+    {% include head.html %}
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2024/12/6 00:00'));</script>
@@ -46,7 +32,7 @@
 	<h2 id="ending">最後に</h2> -->
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

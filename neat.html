@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
-
     <title>Neat CSS</title>
 
     <link rel="stylesheet" type="text/css" href="css/neat.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
-    
-    
-
-    
-    
-
+    {% include head.html %}
 </head>
 
 <body>
 
-    <script>insert_header();</script>
+    {% include header.html %}
     <div class="readable_width content_src">
 
         <a class="home" href="neat.html">&nwarr;</a>
@@ -255,7 +248,7 @@ curl -O https://neat.joeldare.com/neat.html</code></pre>
         <p>You'll find <a href="https://github.com/codazoda/neatcss">Neat CSS on GitHub</a>.</p>
 
     </div>
-    <script>insert_footer();</script>
+    {% include footer.html %}
     <script src="./js/include_headers.js"></script>
 
 </body>

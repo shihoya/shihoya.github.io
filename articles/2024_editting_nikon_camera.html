@@ -2,20 +2,19 @@
 <html lang="ja">
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
 	<title>My Favorite Music in 2024</title>
 
 	<!-- <meta property="og:url" content="https://home.shihoya.tokyo/artilces/20241201_advent_music.html"> -->
 	
 	<meta property="og:title" content="My Favorite Music in 2024">
 	<meta property="og:description" content="今年ハマった5曲を紹介します。">
-	<!-- <meta property="og:image" content=""> -->
-    
+	<!-- <meta property="og:image" content=""> -->    
+    {% include head.html %}
 
 </head>
 
 <body>
-	<script>insert_header();</script>
+	{% include header.html %}
 	<div class="readable_width content_src">
 
 		<script>insert_timestamp(new Date('2024/10/22 00:00'));</script>
@@ -36,7 +35,7 @@
 		<h2 id="ending">最後に</h2>
 
 	</div>
-	<script>insert_footer();</script>
+	{% include footer.html %}
 	
 </body>
 

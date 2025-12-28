@@ -1,851 +1,856 @@
 <!DOCTYPE html>
 <html>
+
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
-<title>20221201_kaikyo_timetable.md</title>
+	<title>20221201_kaikyo_timetable.md</title>
 
 
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
+	<style>
+		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+		/*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
+		body {
+			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+			font-size: var(--vscode-markdown-font-size, 14px);
+			padding: 0 26px;
+			line-height: var(--vscode-markdown-line-height, 22px);
+			word-wrap: break-word;
+		}
 
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
+		#code-csp-warning {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: white;
+			margin: 16px;
+			text-align: center;
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: #444444;
+			cursor: pointer;
+			padding: 6px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+		}
 
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
+		#code-csp-warning:hover {
+			text-decoration: none;
+			background-color: #007acc;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+		}
 
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
+		body.scrollBeyondLastLine {
+			margin-bottom: calc(100vh - 22px);
+		}
 
-body.showEditorSelection .code-line {
-	position: relative;
-}
+		body.showEditorSelection .code-line {
+			position: relative;
+		}
 
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
+		body.showEditorSelection .code-active-line:before,
+		body.showEditorSelection .code-line:hover:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+			height: 100%;
+		}
 
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
+		body.showEditorSelection li.code-active-line:before,
+		body.showEditorSelection li.code-line:hover:before {
+			left: -30px;
+		}
 
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
+		.vscode-light.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.15);
+		}
 
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
+		.vscode-light.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.40);
+		}
 
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
+		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
 
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
+		.vscode-dark.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.4);
+		}
 
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
+		.vscode-dark.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.60);
+		}
 
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
+		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
 
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
+		.vscode-high-contrast.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 160, 0, 0.7);
+		}
 
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
+		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 160, 0, 1);
+		}
 
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
+		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
 
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
 
-a {
-	text-decoration: none;
-}
+		a {
+			text-decoration: none;
+		}
 
-a:hover {
-	text-decoration: underline;
-}
+		a:hover {
+			text-decoration: underline;
+		}
 
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
 
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
+		hr {
+			border: 0;
+			height: 2px;
+			border-bottom: 2px solid;
+		}
 
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
+		h1 {
+			padding-bottom: 0.3em;
+			line-height: 1.2;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
 
-h1, h2, h3 {
-	font-weight: normal;
-}
+		h1,
+		h2,
+		h3 {
+			font-weight: normal;
+		}
 
-table {
-	border-collapse: collapse;
-}
+		table {
+			border-collapse: collapse;
+		}
 
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
+		table>thead>tr>th {
+			text-align: left;
+			border-bottom: 1px solid;
+		}
 
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
+		table>thead>tr>th,
+		table>thead>tr>td,
+		table>tbody>tr>th,
+		table>tbody>tr>td {
+			padding: 5px 10px;
+		}
 
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
+		table>tbody>tr+tr>td {
+			border-top: 1px solid;
+		}
 
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
+		blockquote {
+			margin: 0 7px 0 5px;
+			padding: 0 16px 0 10px;
+			border-left-width: 5px;
+			border-left-style: solid;
+		}
 
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
+		code {
+			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+			font-size: 1em;
+			line-height: 1.357em;
+		}
 
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
+		body.wordWrap pre {
+			white-space: pre-wrap;
+		}
 
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
+		pre:not(.hljs),
+		pre.hljs code>div {
+			padding: 16px;
+			border-radius: 3px;
+			overflow: auto;
+		}
 
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
+		pre code {
+			color: var(--vscode-editor-foreground);
+			tab-size: 4;
+		}
 
-/** Theming */
+		/** Theming */
 
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
+		.vscode-light pre {
+			background-color: rgba(220, 220, 220, 0.4);
+		}
 
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
+		.vscode-dark pre {
+			background-color: rgba(10, 10, 10, 0.4);
+		}
 
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
+		.vscode-high-contrast pre {
+			background-color: rgb(0, 0, 0);
+		}
 
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
+		.vscode-high-contrast h1 {
+			border-color: rgb(0, 0, 0);
+		}
 
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
+		.vscode-light table>thead>tr>th {
+			border-color: rgba(0, 0, 0, 0.69);
+		}
 
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
+		.vscode-dark table>thead>tr>th {
+			border-color: rgba(255, 255, 255, 0.69);
+		}
 
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
+		.vscode-light h1,
+		.vscode-light hr,
+		.vscode-light table>tbody>tr+tr>td {
+			border-color: rgba(0, 0, 0, 0.18);
+		}
 
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
+		.vscode-dark h1,
+		.vscode-dark hr,
+		.vscode-dark table>tbody>tr+tr>td {
+			border-color: rgba(255, 255, 255, 0.18);
+		}
+	</style>
 
-</style>
+	<style>
+		/* Tomorrow Theme */
+		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
 
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+		/* Tomorrow Comment */
+		.hljs-comment,
+		.hljs-quote {
+			color: #8e908c;
+		}
 
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
+		/* Tomorrow Red */
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class,
+		.hljs-regexp,
+		.hljs-deletion {
+			color: #c82829;
+		}
 
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
+		/* Tomorrow Orange */
+		.hljs-number,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params,
+		.hljs-meta,
+		.hljs-link {
+			color: #f5871f;
+		}
 
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
+		/* Tomorrow Yellow */
+		.hljs-attribute {
+			color: #eab700;
+		}
 
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
+		/* Tomorrow Green */
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-addition {
+			color: #718c00;
+		}
 
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
+		/* Tomorrow Blue */
+		.hljs-title,
+		.hljs-section {
+			color: #4271ae;
+		}
 
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
+		/* Tomorrow Purple */
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: #8959a8;
+		}
 
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			color: #4d4d4c;
+			padding: 0.5em;
+		}
 
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
+		.hljs-emphasis {
+			font-style: italic;
+		}
 
-.hljs-emphasis {
-	font-style: italic;
-}
+		.hljs-strong {
+			font-weight: bold;
+		}
+	</style>
 
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
+	<style>
+		/*
  * Markdown PDF CSS
  */
 
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+			padding: 0 12px;
+		}
 
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			overflow-x: auto;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
 
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
+		pre:not(.hljs) {
+			padding: 23px;
+			line-height: 19px;
+		}
 
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
+		blockquote {
+			background: rgba(127, 127, 127, 0.1);
+			border-color: rgba(0, 122, 204, 0.5);
+		}
 
-.emoji {
-	height: 1.4em;
-}
+		.emoji {
+			height: 1.4em;
+		}
 
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
+		code {
+			font-size: 14px;
+			line-height: 19px;
+		}
 
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
+		/* for inline code */
+		:not(pre):not(.hljs)>code {
+			color: #C9AE75;
+			/* Change the old color so it seems less like an error */
+			font-size: inherit;
+		}
 
-/* Page Break : use <div class="page"/> to insert page break
+		/* Page Break : use <div class="page"/> to insert page break
 -------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
+		.page {
+			page-break-after: always;
+		}
+	</style>
 
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    
-    
-
+	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>	
+    {% include head.html %}
 </head>
+
 <body>
-    <script>insert_header();</script>
-    <div class="readable_width content_src">
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="%E6%B4%A5%E8%BB%BD%E6%B5%B7%E5%B3%A1%E7%B7%9A%E4%B8%8B%E3%82%8A-%E9%9D%92%E6%A3%AE--%E5%87%BD%E9%A4%A8">津軽海峡線下り (青森 ~ 函館)</h1>
-<h2 id="%E6%B4%A5%E8%BB%BD%E7%B7%9A-%E9%9D%92%E6%A3%AE--%E8%9F%B9%E7%94%B0">津軽線 (青森 ~ 蟹田)</h2>
-<table>
-<thead>
-<tr>
-<th>列車番号</th>
-<th>327M</th>
-<th>331M</th>
-<th>333M</th>
-<th>337D</th>
-<th>339M</th>
-<th>343M</th>
-<th>345M</th>
-<th>349M</th>
-<th>351M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>青森</strong></td>
-<td><strong>0616</strong></td>
-<td><strong>0814</strong></td>
-<td><strong>1101</strong></td>
-<td><strong>1323</strong></td>
-<td><strong>1531</strong></td>
-<td><strong>1642</strong></td>
-<td><strong>1813</strong></td>
-<td><strong>2015</strong></td>
-<td><strong>2210</strong></td>
-</tr>
-<tr>
-<td>油川</td>
-<td>0623</td>
-<td>0822</td>
-<td>1109</td>
-<td>1331</td>
-<td>1539</td>
-<td>1650</td>
-<td>1821</td>
-<td>2022</td>
-<td>2217</td>
-</tr>
-<tr>
-<td>津軽宮田</td>
-<td>0627</td>
-<td>0826</td>
-<td>1113</td>
-<td>1335</td>
-<td>1543</td>
-<td>1655</td>
-<td>1825</td>
-<td>2027</td>
-<td>2221</td>
-</tr>
-<tr>
-<td>奥内</td>
-<td>0630</td>
-<td>0828</td>
-<td>1116</td>
-<td>1342</td>
-<td>1546</td>
-<td>1658</td>
-<td>1832</td>
-<td>2033</td>
-<td>2225</td>
-</tr>
-<tr>
-<td>左堰</td>
-<td>0633</td>
-<td>0831</td>
-<td>1119</td>
-<td>1345</td>
-<td>1549</td>
-<td>1700</td>
-<td>1834</td>
-<td>2035</td>
-<td>2228</td>
-</tr>
-<tr>
-<td>後潟</td>
-<td>0635</td>
-<td>0834</td>
-<td>1121</td>
-<td>1347</td>
-<td>1551</td>
-<td>1703</td>
-<td>1837</td>
-<td>2038</td>
-<td>2231</td>
-</tr>
-<tr>
-<td>中沢</td>
-<td>0645</td>
-<td>0837</td>
-<td>1125</td>
-<td>1350</td>
-<td>1554</td>
-<td>1706</td>
-<td>1840</td>
-<td>2040</td>
-<td>2234</td>
-</tr>
-<tr>
-<td>蓬田</td>
-<td>0648</td>
-<td>0840</td>
-<td>1128</td>
-<td>1354</td>
-<td>1557</td>
-<td>1709</td>
-<td>1843</td>
-<td>2043</td>
-<td>2237</td>
-</tr>
-<tr>
-<td>郷沢</td>
-<td>0650</td>
-<td>0843</td>
-<td>1131</td>
-<td>1357</td>
-<td>1601</td>
-<td>1712</td>
-<td>1845</td>
-<td>2046</td>
-<td>2240</td>
-</tr>
-<tr>
-<td>瀬辺地</td>
-<td>0653</td>
-<td>0846</td>
-<td>1134</td>
-<td>1400</td>
-<td>1604</td>
-<td>1715</td>
-<td>1848</td>
-<td>2049</td>
-<td>2243</td>
-</tr>
-<tr>
-<td><strong>蟹田</strong></td>
-<td><strong>0658</strong></td>
-<td><strong>0850</strong></td>
-<td><strong>1138</strong></td>
-<td><strong>1404</strong></td>
-<td><strong>1608</strong></td>
-<td><strong>1719</strong></td>
-<td><strong>1852</strong></td>
-<td><strong>2053</strong></td>
-<td><strong>2247</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="%E6%B4%A5%E8%BB%BD%E7%B7%9A%E4%BB%A3%E8%A1%8C%E3%83%90%E3%82%B9-%E8%9F%B9%E7%94%B0--%E4%B8%89%E5%8E%A9">津軽線代行バス (蟹田 ~ 三厩)</h2>
-<table>
-<thead>
-<tr>
-<th>代行バス</th>
-<th>1便</th>
-<th>3便</th>
-<th>5便</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>蟹田</strong></td>
-<td><strong>0707</strong></td>
-<td><strong>1620</strong></td>
-<td><strong>1900</strong></td>
-</tr>
-<tr>
-<td>中小国</td>
-<td>0718</td>
-<td>1631</td>
-<td>1911</td>
-</tr>
-<tr>
-<td>大平</td>
-<td>0724</td>
-<td>1637</td>
-<td>1917</td>
-</tr>
-<tr>
-<td><strong>津軽二股</strong></td>
-<td><strong>0740</strong></td>
-<td><strong>1653</strong></td>
-<td><strong>1933</strong></td>
-</tr>
-<tr>
-<td>大川平</td>
-<td>0745</td>
-<td>1658</td>
-<td>1938</td>
-</tr>
-<tr>
-<td>今別</td>
-<td>0750</td>
-<td>1703</td>
-<td>1943</td>
-</tr>
-<tr>
-<td>津軽浜名</td>
-<td>0756</td>
-<td>1709</td>
-<td>1949</td>
-</tr>
-<tr>
-<td>三厩</td>
-<td>0822</td>
-<td>1735</td>
-<td>2015</td>
-</tr>
-</tbody>
-</table>
-<h2 id="%E5%8C%97%E6%B5%B7%E9%81%93%E6%96%B0%E5%B9%B9%E7%B7%9A-%E6%96%B0%E9%9D%92%E6%A3%AE--%E6%96%B0%E5%87%BD%E9%A4%A8%E5%8C%97%E6%96%97">北海道新幹線 (新青森 ~ 新函館北斗)</h2>
-<table>
-<thead>
-<tr>
-<th>列車番号</th>
-<th>91B</th>
-<th>93B</th>
-<th>3095B</th>
-<th>3001B</th>
-<th>7B</th>
-<th>13B</th>
-<th>19B</th>
-<th>3023B</th>
-<th>3025B</th>
-<th>3027B</th>
-<th>3031B</th>
-<th>3039B</th>
-<th>3043B</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>新青森</td>
-<td>0632</td>
-<td>0756</td>
-<td>0904</td>
-<td>0951</td>
-<td>1120</td>
-<td>1236</td>
-<td>1359</td>
-<td>1531</td>
-<td>1645</td>
-<td>1732</td>
-<td>1841</td>
-<td>2042</td>
-<td>2232</td>
-</tr>
-<tr>
-<td>奥津軽い</td>
-<td>0648</td>
-<td>0812</td>
-<td>↓</td>
-<td>1007</td>
-<td>↓</td>
-<td>↓</td>
-<td>1415</td>
-<td>↓</td>
-<td>1701</td>
-<td>↓</td>
-<td>1858</td>
-<td>2058</td>
-<td>↓</td>
-</tr>
-<tr>
-<td>木古内</td>
-<td>0722</td>
-<td>0846</td>
-<td>↓</td>
-<td>1041</td>
-<td>↓</td>
-<td>↓</td>
-<td>1449</td>
-<td>1618</td>
-<td>1735</td>
-<td>↓</td>
-<td>1931</td>
-<td>2132</td>
-<td>↓</td>
-</tr>
-<tr>
-<td>新函館北</td>
-<td>0734</td>
-<td>0858</td>
-<td>1001</td>
-<td>1053</td>
-<td>1217</td>
-<td>1333</td>
-<td>1501</td>
-<td>1630</td>
-<td>1747</td>
-<td>1829</td>
-<td>1944</td>
-<td>2144</td>
-<td>2329</td>
-</tr>
-</tbody>
-</table>
-<h2 id="%E6%B1%9F%E5%B7%AE%E7%B7%9A-%E6%9C%A8%E5%8F%A4%E5%86%85--%E5%87%BD%E9%A4%A8">江差線 (木古内 ~ 函館)</h2>
-<table>
-<thead>
-<tr>
-<th>列車番号</th>
-<th>121D</th>
-<th>123D</th>
-<th>125D</th>
-<th>127D</th>
-<th>129D</th>
-<th>131D</th>
-<th>133D</th>
-<th>135D</th>
-<th>137D</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>木古内</td>
-<td>0624</td>
-<td>0712</td>
-<td>0913</td>
-<td>1116</td>
-<td>1251</td>
-<td>1519</td>
-<td>1632</td>
-<td>1915</td>
-<td>2055</td>
-</tr>
-<tr>
-<td>札苅</td>
-<td>0629</td>
-<td>0717</td>
-<td>0918</td>
-<td>1121</td>
-<td>1256</td>
-<td>1524</td>
-<td>1637</td>
-<td>1920</td>
-<td>2100</td>
-</tr>
-<tr>
-<td>泉沢</td>
-<td>0635</td>
-<td>0722</td>
-<td>0923</td>
-<td>1126</td>
-<td>1301</td>
-<td>1529</td>
-<td>1642</td>
-<td>1925</td>
-<td>2105</td>
-</tr>
-<tr>
-<td>釜谷</td>
-<td>0639</td>
-<td>0727</td>
-<td>0927</td>
-<td>1131</td>
-<td>1306</td>
-<td>1534</td>
-<td>1647</td>
-<td>1930</td>
-<td>2109</td>
-</tr>
-<tr>
-<td>渡島当別</td>
-<td>0646</td>
-<td>0733</td>
-<td>0933</td>
-<td>1137</td>
-<td>1312</td>
-<td>1541</td>
-<td>1653</td>
-<td>1936</td>
-<td>2115</td>
-</tr>
-<tr>
-<td>茂辺地</td>
-<td>0652</td>
-<td>0740</td>
-<td>0940</td>
-<td>1143</td>
-<td>1319</td>
-<td>1548</td>
-<td>1700</td>
-<td>1943</td>
-<td>2122</td>
-</tr>
-<tr>
-<td>上磯</td>
-<td>0703</td>
-<td>0751</td>
-<td>0951</td>
-<td>1154</td>
-<td>1330</td>
-<td>1559</td>
-<td>1710</td>
-<td>1954</td>
-<td>2133</td>
-</tr>
-<tr>
-<td>清川口</td>
-<td>0706</td>
-<td>0754</td>
-<td>0953</td>
-<td>1157</td>
-<td>1332</td>
-<td>1602</td>
-<td>1713</td>
-<td>1957</td>
-<td>2136</td>
-</tr>
-<tr>
-<td>久根別</td>
-<td>0709</td>
-<td>0759</td>
-<td>0956</td>
-<td>1200</td>
-<td>1338</td>
-<td>1605</td>
-<td>1716</td>
-<td>2000</td>
-<td>2141</td>
-</tr>
-<tr>
-<td>東久根別</td>
-<td>0712</td>
-<td>0802</td>
-<td>0959</td>
-<td>1202</td>
-<td>1341</td>
-<td>1608</td>
-<td>1719</td>
-<td>2002</td>
-<td>2143</td>
-</tr>
-<tr>
-<td>七重浜</td>
-<td>0717</td>
-<td>0806</td>
-<td>1003</td>
-<td>1207</td>
-<td>1346</td>
-<td>1612</td>
-<td>1724</td>
-<td>2007</td>
-<td>2148</td>
-</tr>
-<tr>
-<td>五稜郭</td>
-<td>0722</td>
-<td>0811</td>
-<td>1008</td>
-<td>1212</td>
-<td>1351</td>
-<td>1617</td>
-<td>1729</td>
-<td>2011</td>
-<td>2153</td>
-</tr>
-<tr>
-<td>函館</td>
-<td>0727</td>
-<td>0816</td>
-<td>1013</td>
-<td>1217</td>
-<td>1356</td>
-<td>1622</td>
-<td>1734</td>
-<td>2016</td>
-<td>2158</td>
-</tr>
-</tbody>
-</table>
+	{% include header.html %}
+	<div class="readable_width content_src">
+		<script>
+			mermaid.initialize({
+				startOnLoad: true,
+				theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+					? 'dark'
+					: 'default'
+			});
+		</script>
+		<h1 id="%E6%B4%A5%E8%BB%BD%E6%B5%B7%E5%B3%A1%E7%B7%9A%E4%B8%8B%E3%82%8A-%E9%9D%92%E6%A3%AE--%E5%87%BD%E9%A4%A8">
+			津軽海峡線下り (青森 ~ 函館)</h1>
+		<h2 id="%E6%B4%A5%E8%BB%BD%E7%B7%9A-%E9%9D%92%E6%A3%AE--%E8%9F%B9%E7%94%B0">津軽線 (青森 ~ 蟹田)</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>列車番号</th>
+					<th>327M</th>
+					<th>331M</th>
+					<th>333M</th>
+					<th>337D</th>
+					<th>339M</th>
+					<th>343M</th>
+					<th>345M</th>
+					<th>349M</th>
+					<th>351M</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>青森</strong></td>
+					<td><strong>0616</strong></td>
+					<td><strong>0814</strong></td>
+					<td><strong>1101</strong></td>
+					<td><strong>1323</strong></td>
+					<td><strong>1531</strong></td>
+					<td><strong>1642</strong></td>
+					<td><strong>1813</strong></td>
+					<td><strong>2015</strong></td>
+					<td><strong>2210</strong></td>
+				</tr>
+				<tr>
+					<td>油川</td>
+					<td>0623</td>
+					<td>0822</td>
+					<td>1109</td>
+					<td>1331</td>
+					<td>1539</td>
+					<td>1650</td>
+					<td>1821</td>
+					<td>2022</td>
+					<td>2217</td>
+				</tr>
+				<tr>
+					<td>津軽宮田</td>
+					<td>0627</td>
+					<td>0826</td>
+					<td>1113</td>
+					<td>1335</td>
+					<td>1543</td>
+					<td>1655</td>
+					<td>1825</td>
+					<td>2027</td>
+					<td>2221</td>
+				</tr>
+				<tr>
+					<td>奥内</td>
+					<td>0630</td>
+					<td>0828</td>
+					<td>1116</td>
+					<td>1342</td>
+					<td>1546</td>
+					<td>1658</td>
+					<td>1832</td>
+					<td>2033</td>
+					<td>2225</td>
+				</tr>
+				<tr>
+					<td>左堰</td>
+					<td>0633</td>
+					<td>0831</td>
+					<td>1119</td>
+					<td>1345</td>
+					<td>1549</td>
+					<td>1700</td>
+					<td>1834</td>
+					<td>2035</td>
+					<td>2228</td>
+				</tr>
+				<tr>
+					<td>後潟</td>
+					<td>0635</td>
+					<td>0834</td>
+					<td>1121</td>
+					<td>1347</td>
+					<td>1551</td>
+					<td>1703</td>
+					<td>1837</td>
+					<td>2038</td>
+					<td>2231</td>
+				</tr>
+				<tr>
+					<td>中沢</td>
+					<td>0645</td>
+					<td>0837</td>
+					<td>1125</td>
+					<td>1350</td>
+					<td>1554</td>
+					<td>1706</td>
+					<td>1840</td>
+					<td>2040</td>
+					<td>2234</td>
+				</tr>
+				<tr>
+					<td>蓬田</td>
+					<td>0648</td>
+					<td>0840</td>
+					<td>1128</td>
+					<td>1354</td>
+					<td>1557</td>
+					<td>1709</td>
+					<td>1843</td>
+					<td>2043</td>
+					<td>2237</td>
+				</tr>
+				<tr>
+					<td>郷沢</td>
+					<td>0650</td>
+					<td>0843</td>
+					<td>1131</td>
+					<td>1357</td>
+					<td>1601</td>
+					<td>1712</td>
+					<td>1845</td>
+					<td>2046</td>
+					<td>2240</td>
+				</tr>
+				<tr>
+					<td>瀬辺地</td>
+					<td>0653</td>
+					<td>0846</td>
+					<td>1134</td>
+					<td>1400</td>
+					<td>1604</td>
+					<td>1715</td>
+					<td>1848</td>
+					<td>2049</td>
+					<td>2243</td>
+				</tr>
+				<tr>
+					<td><strong>蟹田</strong></td>
+					<td><strong>0658</strong></td>
+					<td><strong>0850</strong></td>
+					<td><strong>1138</strong></td>
+					<td><strong>1404</strong></td>
+					<td><strong>1608</strong></td>
+					<td><strong>1719</strong></td>
+					<td><strong>1852</strong></td>
+					<td><strong>2053</strong></td>
+					<td><strong>2247</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 id="%E6%B4%A5%E8%BB%BD%E7%B7%9A%E4%BB%A3%E8%A1%8C%E3%83%90%E3%82%B9-%E8%9F%B9%E7%94%B0--%E4%B8%89%E5%8E%A9">
+			津軽線代行バス (蟹田 ~ 三厩)</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>代行バス</th>
+					<th>1便</th>
+					<th>3便</th>
+					<th>5便</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>蟹田</strong></td>
+					<td><strong>0707</strong></td>
+					<td><strong>1620</strong></td>
+					<td><strong>1900</strong></td>
+				</tr>
+				<tr>
+					<td>中小国</td>
+					<td>0718</td>
+					<td>1631</td>
+					<td>1911</td>
+				</tr>
+				<tr>
+					<td>大平</td>
+					<td>0724</td>
+					<td>1637</td>
+					<td>1917</td>
+				</tr>
+				<tr>
+					<td><strong>津軽二股</strong></td>
+					<td><strong>0740</strong></td>
+					<td><strong>1653</strong></td>
+					<td><strong>1933</strong></td>
+				</tr>
+				<tr>
+					<td>大川平</td>
+					<td>0745</td>
+					<td>1658</td>
+					<td>1938</td>
+				</tr>
+				<tr>
+					<td>今別</td>
+					<td>0750</td>
+					<td>1703</td>
+					<td>1943</td>
+				</tr>
+				<tr>
+					<td>津軽浜名</td>
+					<td>0756</td>
+					<td>1709</td>
+					<td>1949</td>
+				</tr>
+				<tr>
+					<td>三厩</td>
+					<td>0822</td>
+					<td>1735</td>
+					<td>2015</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2
+			id="%E5%8C%97%E6%B5%B7%E9%81%93%E6%96%B0%E5%B9%B9%E7%B7%9A-%E6%96%B0%E9%9D%92%E6%A3%AE--%E6%96%B0%E5%87%BD%E9%A4%A8%E5%8C%97%E6%96%97">
+			北海道新幹線 (新青森 ~ 新函館北斗)</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>列車番号</th>
+					<th>91B</th>
+					<th>93B</th>
+					<th>3095B</th>
+					<th>3001B</th>
+					<th>7B</th>
+					<th>13B</th>
+					<th>19B</th>
+					<th>3023B</th>
+					<th>3025B</th>
+					<th>3027B</th>
+					<th>3031B</th>
+					<th>3039B</th>
+					<th>3043B</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>新青森</td>
+					<td>0632</td>
+					<td>0756</td>
+					<td>0904</td>
+					<td>0951</td>
+					<td>1120</td>
+					<td>1236</td>
+					<td>1359</td>
+					<td>1531</td>
+					<td>1645</td>
+					<td>1732</td>
+					<td>1841</td>
+					<td>2042</td>
+					<td>2232</td>
+				</tr>
+				<tr>
+					<td>奥津軽い</td>
+					<td>0648</td>
+					<td>0812</td>
+					<td>↓</td>
+					<td>1007</td>
+					<td>↓</td>
+					<td>↓</td>
+					<td>1415</td>
+					<td>↓</td>
+					<td>1701</td>
+					<td>↓</td>
+					<td>1858</td>
+					<td>2058</td>
+					<td>↓</td>
+				</tr>
+				<tr>
+					<td>木古内</td>
+					<td>0722</td>
+					<td>0846</td>
+					<td>↓</td>
+					<td>1041</td>
+					<td>↓</td>
+					<td>↓</td>
+					<td>1449</td>
+					<td>1618</td>
+					<td>1735</td>
+					<td>↓</td>
+					<td>1931</td>
+					<td>2132</td>
+					<td>↓</td>
+				</tr>
+				<tr>
+					<td>新函館北</td>
+					<td>0734</td>
+					<td>0858</td>
+					<td>1001</td>
+					<td>1053</td>
+					<td>1217</td>
+					<td>1333</td>
+					<td>1501</td>
+					<td>1630</td>
+					<td>1747</td>
+					<td>1829</td>
+					<td>1944</td>
+					<td>2144</td>
+					<td>2329</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 id="%E6%B1%9F%E5%B7%AE%E7%B7%9A-%E6%9C%A8%E5%8F%A4%E5%86%85--%E5%87%BD%E9%A4%A8">江差線 (木古内 ~ 函館)</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>列車番号</th>
+					<th>121D</th>
+					<th>123D</th>
+					<th>125D</th>
+					<th>127D</th>
+					<th>129D</th>
+					<th>131D</th>
+					<th>133D</th>
+					<th>135D</th>
+					<th>137D</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>木古内</td>
+					<td>0624</td>
+					<td>0712</td>
+					<td>0913</td>
+					<td>1116</td>
+					<td>1251</td>
+					<td>1519</td>
+					<td>1632</td>
+					<td>1915</td>
+					<td>2055</td>
+				</tr>
+				<tr>
+					<td>札苅</td>
+					<td>0629</td>
+					<td>0717</td>
+					<td>0918</td>
+					<td>1121</td>
+					<td>1256</td>
+					<td>1524</td>
+					<td>1637</td>
+					<td>1920</td>
+					<td>2100</td>
+				</tr>
+				<tr>
+					<td>泉沢</td>
+					<td>0635</td>
+					<td>0722</td>
+					<td>0923</td>
+					<td>1126</td>
+					<td>1301</td>
+					<td>1529</td>
+					<td>1642</td>
+					<td>1925</td>
+					<td>2105</td>
+				</tr>
+				<tr>
+					<td>釜谷</td>
+					<td>0639</td>
+					<td>0727</td>
+					<td>0927</td>
+					<td>1131</td>
+					<td>1306</td>
+					<td>1534</td>
+					<td>1647</td>
+					<td>1930</td>
+					<td>2109</td>
+				</tr>
+				<tr>
+					<td>渡島当別</td>
+					<td>0646</td>
+					<td>0733</td>
+					<td>0933</td>
+					<td>1137</td>
+					<td>1312</td>
+					<td>1541</td>
+					<td>1653</td>
+					<td>1936</td>
+					<td>2115</td>
+				</tr>
+				<tr>
+					<td>茂辺地</td>
+					<td>0652</td>
+					<td>0740</td>
+					<td>0940</td>
+					<td>1143</td>
+					<td>1319</td>
+					<td>1548</td>
+					<td>1700</td>
+					<td>1943</td>
+					<td>2122</td>
+				</tr>
+				<tr>
+					<td>上磯</td>
+					<td>0703</td>
+					<td>0751</td>
+					<td>0951</td>
+					<td>1154</td>
+					<td>1330</td>
+					<td>1559</td>
+					<td>1710</td>
+					<td>1954</td>
+					<td>2133</td>
+				</tr>
+				<tr>
+					<td>清川口</td>
+					<td>0706</td>
+					<td>0754</td>
+					<td>0953</td>
+					<td>1157</td>
+					<td>1332</td>
+					<td>1602</td>
+					<td>1713</td>
+					<td>1957</td>
+					<td>2136</td>
+				</tr>
+				<tr>
+					<td>久根別</td>
+					<td>0709</td>
+					<td>0759</td>
+					<td>0956</td>
+					<td>1200</td>
+					<td>1338</td>
+					<td>1605</td>
+					<td>1716</td>
+					<td>2000</td>
+					<td>2141</td>
+				</tr>
+				<tr>
+					<td>東久根別</td>
+					<td>0712</td>
+					<td>0802</td>
+					<td>0959</td>
+					<td>1202</td>
+					<td>1341</td>
+					<td>1608</td>
+					<td>1719</td>
+					<td>2002</td>
+					<td>2143</td>
+				</tr>
+				<tr>
+					<td>七重浜</td>
+					<td>0717</td>
+					<td>0806</td>
+					<td>1003</td>
+					<td>1207</td>
+					<td>1346</td>
+					<td>1612</td>
+					<td>1724</td>
+					<td>2007</td>
+					<td>2148</td>
+				</tr>
+				<tr>
+					<td>五稜郭</td>
+					<td>0722</td>
+					<td>0811</td>
+					<td>1008</td>
+					<td>1212</td>
+					<td>1351</td>
+					<td>1617</td>
+					<td>1729</td>
+					<td>2011</td>
+					<td>2153</td>
+				</tr>
+				<tr>
+					<td>函館</td>
+					<td>0727</td>
+					<td>0816</td>
+					<td>1013</td>
+					<td>1217</td>
+					<td>1356</td>
+					<td>1622</td>
+					<td>1734</td>
+					<td>2016</td>
+					<td>2158</td>
+				</tr>
+			</tbody>
+		</table>
 
 </body>
+
 </html>

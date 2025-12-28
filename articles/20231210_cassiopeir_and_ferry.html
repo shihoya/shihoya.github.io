@@ -2,16 +2,16 @@
 <html lang="ja">
 
 <head id="include_head">
-    <script src="/js/include_heads.js"></script>
     <title>上野から函館へ贅沢な旅路の記録</title>
     <meta property="og:title" content="上野から函館へ贅沢な旅路の記録">
     <meta property="og:description" content="憧れの寝台特急カシオペアに乗った話をします。">
     
     <meta property="og:image" content="https://home.shihoya.tokyo/articles/media/cassiopeir/20230409_090034.JPG">
+    {% include head.html %}
 </head>
 
 <body>
-    <script>insert_header();</script>
+    {% include header.html %}
     <div class="readable_width content_src">
 
         <script>insert_timestamp(new Date('2023/12/10 00:00'));</script>
@@ -284,7 +284,7 @@
         <p>出来るのならばもう一度乗りたいけど、無理かなあ......</p>
 
     </div>
-    <script>insert_footer();</script>
+    {% include footer.html %}
     
 </body>
 
