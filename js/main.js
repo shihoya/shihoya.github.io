@@ -46,29 +46,29 @@ function insert_timestamp(datetime) {
 	document.write(headerSource);
 }
 
-function insert_header() {
-	var header_data = '<header>' +
-	'<div id="header_src">' +
-	'<div class="readable_width">' +
-	'<div class="header_content">' +
-	'<a id="header_text" class="no_underline" href="/">' +
-	'Shihoya\'s home' +
-	'</a>' +
-	'<a id="header_icon" href="https://mstdn.shihoya.tokyo/@ARTi">' +
-	'<i class="fa-brands fa-mastodon" style="color: white;"></i>' +
-	'</a>' +
-	'</div>' +
-	'</div>' +
-	'</div>' +
-	'</header>';
-	document.write(header_data);
-}
+// function insert_header() {
+// 	var header_data = '<header>' +
+// 	'<div id="header_src">' +
+// 	'<div class="readable_width">' +
+// 	'<div class="header_content">' +
+// 	'<a id="header_text" class="no_underline" href="/">' +
+// 	'Shihoya\'s home' +
+// 	'</a>' +
+// 	'<a id="header_icon" href="https://mstdn.shihoya.tokyo/@ARTi">' +
+// 	'<i class="fa-brands fa-mastodon" style="color: white;"></i>' +
+// 	'</a>' +
+// 	'</div>' +
+// 	'</div>' +
+// 	'</div>' +
+// 	'</header>';
+// 	document.write(header_data);
+// }
 
-function insert_footer() {
-	var footer_data = '<footer>' + 
-	'<div id="footer_src" style="text-align: center;">' + 
-	'&copy; <a href="/">Shihoya</a> 2022-2026' + 
-	'</div>' + 
-	'</footer>';
-	document.write(footer_data);
-}
+// function insert_footer() {
+// 	var footer_data = '<footer>' + 
+// 	'<div id="footer_src" style="text-align: center;">' + 
+// 	'&copy; <a href="/">Shihoya</a> 2022-2026' + 
+// 	'</div>' + 
+// 	'</footer>';
+// 	document.write(footer_data);
+// }
